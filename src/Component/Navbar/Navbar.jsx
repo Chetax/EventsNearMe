@@ -73,11 +73,11 @@ const Navbar = () => {
   sx={{
     display: "flex",
     justifyContent: "space-between",
-    overflowX: "auto", // Enable horizontal scrolling
-    scrollbarWidth: "none", // Hide scrollbar in Firefox
-    "-ms-overflow-style": "none", // Hide scrollbar in IE
+    overflowX: "auto",
+    scrollbarWidth: "none", 
+    "-ms-overflow-style": "none", 
     "&::-webkit-scrollbar": {
-      display: "none", // Hide scrollbar in WebKit browsers
+      display: "none",
     },
     '@media (min-width: 770px)': {
       display: "none",
