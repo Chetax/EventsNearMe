@@ -1,9 +1,6 @@
 # GyanGrove 
 
 ## [Project overview.](https://gyan-grove-assignment-umber.vercel.app/)
-# Project Overview
-
-Our project is a responsive web application that displays upcoming and recommended events. It seamlessly adapts to both desktop and mobile screen sizes to provide users with an optimal viewing experience. 
 
 # Project Overview
 
