@@ -1,8 +1,39 @@
 # GyanGrove 
 
 ## [Project overview.](https://gyan-grove-assignment-umber.vercel.app/)
-# Setup and Local Run Instructions
+# Project Overview
 
+Our project is a responsive web application that displays upcoming and recommended events. It seamlessly adapts to both desktop and mobile screen sizes to provide users with an optimal viewing experience. 
+
+# Project Overview
+
+My project is a responsive web application that displays upcoming and recommended events. It seamlessly adapts to both desktop and mobile screen sizes to provide users with an optimal viewing experience. 
+
+### Technologies Used:
+
+- **React JS:** I chose React JS for its effectiveness in building dynamic and interactive user interfaces. With its component-based architecture, React enables me to create reusable UI components, making development more efficient.
+
+- **Material-UI:** I utilized Material-UI to ensure that my web application is responsive and visually appealing across various devices and screen sizes. Material-UI provides a set of pre-designed React components with a modern and sleek design, enabling me to rapidly develop a user-friendly interface.
+
+### Key Features:
+
+- **Upcoming Events:** Users can view a list of upcoming events, including details such as event name, date, location, and distance.
+
+- **Recommended Events:** The application also showcases recommended events based on user preferences or other relevant criteria.
+
+- **Responsive Design:** My website is designed to seamlessly adapt to different screen sizes, ensuring a consistent and enjoyable user experience on both desktop and mobile devices.
+
+### How It Works:
+
+1. The website fetches event data from the provided APIs, ensuring that users have access to the latest information about upcoming and recommended events.
+
+2. Using React JS, I dynamically render the fetched event data to create an intuitive and interactive user interface.
+
+3. Material-UI components are utilized to design and structure the web application, ensuring responsiveness and modern aesthetics.
+
+Overall, my project combines the power of React JS and Material-UI to deliver a user-friendly and visually appealing web application for discovering upcoming and recommended events.
+
+# Setup and Local Run Instructions
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Installation
