@@ -2,7 +2,7 @@ import { Grid, Container, Typography } from '@mui/material';
 import Card from './Card';
 import { useEffect, useState } from 'react';
 import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt';
-import Loader from './Loader';
+import Loader from '../Loader';
 
 function ImageList() {
     const [events, setEvents] = useState([]);
@@ -12,7 +12,7 @@ function ImageList() {
         const fetchData = async () => {
             try {
                 setLoading(true);
-                const response = await fetch("https://gg-backend-assignment.azurewebsites.net/api/Events?code=FOX643kbHEAkyPbdd8nwNLkekHcL4z0hzWBGCd64Ur7mAzFuRCHeyQ==&page=1&type=upcoming");
+                const response = await fetch(`${process.env.REACT_APP_UpcommingEvent}`);
                 if (!response.ok) {
                     console.log("Error Occurred During Data Fetching");
                     return;
@@ -48,7 +48,7 @@ function ImageList() {
         <Container sx={{pt:5}}>
        <Container sx={{display:"flex",justifyContent:'space-between',alignItems:"center",pb:2}}>
              <Typography sx={{ pl: 7 ,cursor:'pointer',display:"flex",justifyContent:'center',alignItems:"center"}} variant="h5" color="#1E2022" >Upcomming events <ArrowRightAltIcon /></Typography>
-             <Typography sx={{textDecoration:"underline"}}> See All</Typography>
+             <Typography sx={{textDecoration:"underline",cursor:"pointer" }}> See All</Typography>
        </Container>
            {loading ? <Loader /> :
                 <Grid container spacing={2} justifyContent="center" alignContent="center">

@@ -6,7 +6,6 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
-import img from './download.jpg';
 import { Box } from '@mui/joy';
 
 // Function to format date
@@ -21,7 +20,7 @@ export default function MediaCard({ items }) {
     const formattedDate = formatDate(items.date);
 
     return (
-        <Card sx={{ maxWidth: 400 }}>
+        <Card sx={{ maxWidth: 400,cursor:"pointer"  }}>
             <CardMedia
                 sx={{
                     position: 'relative',
@@ -51,7 +50,7 @@ export default function MediaCard({ items }) {
                 </Typography>
             </CardMedia>
 
-            <CardContent>
+            <CardContent >
                 <Typography sx={{ mt: 2 }} gutterBottom variant="body1" fontWeight={'bold'} component="div">
                     {items.eventName}
                 </Typography>

@@ -5,9 +5,7 @@ import { useState, useEffect } from "react";
 import Box from '@mui/joy/Box';
 import Typography from '@mui/joy/Typography';
 
-import Loader from './Loader';
-import img from './download.jpg';
-import { Grid } from '@mui/joy';
+import Loader from '../Loader';
 
 export default function CarouselRatio() {
   const [events, setEvents] = useState([]);
@@ -16,9 +14,8 @@ export default function CarouselRatio() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        await new Promise(resolve => setTimeout(resolve, 1000));
-        const response = await fetch('https://gg-backend-assignment.azurewebsites.net/api/Events?code=FOX643kbHEAkyPbdd8nwNLkekHcL4z0hzWBGCd64Ur7mAzFuRCHeyQ==&type=reco');
-
+            const response = await fetch(`${process.env.REACT_APP_RecommandedEvent}`);
+         
         if (!response.ok) {
           throw new Error('Failed to Fetch the data');
         }    
@@ -36,8 +33,9 @@ export default function CarouselRatio() {
         setEvents(formattedEvents);
         setLoading(false); 
       } catch (err) {
+        
         console.log('Error In Fetching Data', err);
-        setLoading(false);
+  
       }
     };
 
@@ -73,10 +71,10 @@ export default function CarouselRatio() {
       >
         {events.map((item) => (
               
-          <Box key={item.eventName} sx={{ position: 'relative', minWidth: 300 }}>
+          <Box sx={{}} key={item.eventName} sx={{ position: 'relative', minWidth: 300 }}>
             <AspectRatio ratio="1" variant="plain">
               <img
-                style={{ padding: 0 }}
+                style={{ padding: 0 ,cursor:"pointer"}}
                 placeholder="blur"
                 srcSet={item.imgUrl}
                 src={item.imgUrl}
