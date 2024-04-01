@@ -64,5 +64,4 @@ This project is licensed under the [MIT License](LICENSE).
 
 ## Acknowledgments
 
-- Credits or acknowledgments (optional).
-- List of external libraries or resources used.
+- @GyanGrove 
