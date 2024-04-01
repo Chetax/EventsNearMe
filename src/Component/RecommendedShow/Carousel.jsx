@@ -71,7 +71,7 @@ export default function CarouselRatio() {
       >
         {events.map((item) => (
               
-          <Box sx={{}} key={item.eventName} sx={{ position: 'relative', minWidth: 300 }}>
+          <Box key={item.eventName} sx={{ position: 'relative', minWidth: 300 }}>
             <AspectRatio ratio="1" variant="plain">
               <img
                 style={{ padding: 0 ,cursor:"pointer"}}

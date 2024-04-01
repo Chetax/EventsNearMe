@@ -69,15 +69,33 @@ const Navbar = () => {
       </Box>
 
       {/* Category section for small screen */}
-      <Box sx={{ display: "flex", justifyContent: "space-between", '@media (min-width: 770px)': { display: "none" } }}>
-        <Grid container sx={{ pl: 2.5, mt: 2, pr: 2, color: "#989090", fontSize: "15px" }}>
-          <Grid item xs={12} sx={{ display: "flex", alignItems: "center", justifyContent: "space-between  " }} >
-            {Events.map((event, index) => (
-              <Typography sx={{cursor:"pointer"}} key={index} variant="body1" fontFamily="Inter">{event}</Typography>
-            ))}
-          </Grid>
-        </Grid>
-      </Box>
+      <Box
+  sx={{
+    display: "flex",
+    justifyContent: "space-between",
+    overflowX: "auto", // Enable horizontal scrolling
+    scrollbarWidth: "none", // Hide scrollbar in Firefox
+    "-ms-overflow-style": "none", // Hide scrollbar in IE
+    "&::-webkit-scrollbar": {
+      display: "none", // Hide scrollbar in WebKit browsers
+    },
+    '@media (min-width: 770px)': {
+      display: "none",
+    }
+  }}
+>
+  {Events.map((event, index) => (
+    <Typography
+      key={index}
+      variant="body1"
+      fontFamily="Inter"
+      sx={{ cursor: "pointer", flexShrink: 0, minWidth: "max-content", pr: 2 }}
+    >
+      {event}
+    </Typography>
+  ))}
+</Box>
+
     </Box>
   );
 }
